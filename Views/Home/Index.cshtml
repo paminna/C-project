@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div class="container mt-5">
+        <h3>Они Вас Ждут!</h3>
+
+
+
+        <div class=" container mt-5">
+            <div class="row ml-5 mt-lg-5 mb-2">
+                <div class=" col-lg-4">
+                    <img class="img-thumbnail" src="~/Content/img/haski.jpg" width="350px" />
+                    <h2>Хаски</h2>
+                    <p>Милый друг</p>
+
+                    <p><a class="btn btn-warning" href="#">Подробнее</a></p>
+                </div>
+
+
+                <div class=" col-lg-4">
+                    <img class="img-thumbnail" src="~/Content/img/olabay.jpg" width="350px" />
+                    <h2>Алабай</h2>
+                    <p>Большая Няня</p>
+
+                    <p><a class="btn btn-warning" href="#">Подробнее</a></p>
+                </div>
+
+
+                <div class=" col-lg-4">
+                    <img class="img-thumbnail" src="~/Content/img/korgi.jpg" width="350px" />
+                    <h2>Корги</h2>
+                    <p>Ну разве не прелесть?</p>
+
+                    <p><a class="btn btn-warning" href="#">Подробнее</a></p>
+                </div>
+
+
+            </div>
+        </div>
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <td><h4>Порода</h4></td>
+                    <td>Цена</td>
+
+                    <td>&nbsp;</td>
+                </tr>
+            </thead>
+            @{
+                foreach (var dog in ViewBag.Dogs)
+                {
+                        <tr>
+                            <td>@dog.Name</td>
+                            <td>@dog.Price</td>
+                             <td></td>
+                            <td><a class="buyDog" href="/Home/Buy/@dog.Id">Купить</a></td>
+                        </tr>
+                }
+            }
+        </table>
+    </div>
+
+

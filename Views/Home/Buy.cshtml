@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+ 
+ 
+    
+    <title>Оформление покупки</title>
+ 
+ 
+    <div class="buyProd">
+        <h2>Оформление покупки</h2>
+        <br />
+        <form method="post" action="">
+            <input type="hidden" name="DogId" value="@ViewBag.Id" />
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="font-size: 22px;  " >Ваше Имя</td>
+                       
+                        <td><input type="text" name="FIO" /></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 22px; ">Ваша почта</td>
+                        <td><input type="text" name="Email" /></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 22px; ">Адрес доставки</td>
+                        <td><input type="text" name="Address" /></td>
+                    </tr>
+                    <tr class="in">
+                        <td colspan="2"  style="font-size: 22px;  " ><input type="submit" value="Оформить покупку" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+ 
